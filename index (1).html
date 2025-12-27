@@ -31,9 +31,6 @@
   
 }
 
-
-}
-
 .card {
   perspective: 1000px;
   cursor: pointer;
@@ -102,9 +99,9 @@
   
 <p>Welcome to The Tres Leches Awards. The only movie awards that mean anything. Please pick your <strong>Top 3</strong> in each category.</p>
 <label><strong>Your Name</strong></label>
-<input id="voterName" placeholder="Enter your name" style="width:100%;padding:8px;margin-bottom:20px;" /> 1st = 3 points, 2nd = 2 points, 3rd = 1 point.</p>
+</p><input id="voterName" placeholder="Enter your name" style="width:100%;padding:8px;margin-bottom:20px;" /> 1st = 3 points, 2nd = 2 points, 3rd = 1 point.</p>
 
-<div style="button-bar">
+<div class="button-bar">
   <button onclick="submitVote()">Submit Vote</button>
   <button onclick="showResults()">Show Winners</button>
   <button onclick="resetVotes()">Reset Votes</button>
@@ -165,7 +162,7 @@ const movies = [
   "Magazine Dreams",
   "Materialists",
   "M3gan 2.0",
-  "Micky 17",
+  "Mickey 17",
   "Minecraft Movie",
   "Mission Impossible Final Reckoning",
   "Ne Zha 2",
