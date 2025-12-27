@@ -99,7 +99,7 @@
   
 <p>Welcome to The Tres Leches Awards. The only movie awards that mean anything. Please pick your <strong>Top 3</strong> in each category.</p>
 <label><strong>Your Name</strong></label>
-</p><input id="voterName" placeholder="Enter your name" style="width:100%;padding:8px;margin-bottom:20px;" /> 1st = 3 points, 2nd = 2 points, 3rd = 1 point.</p>
+<p><input id="voterName" placeholder="Enter your name" style="width:100%;padding:8px;margin-bottom:20px;" /> 1st = 3 points, 2nd = 2 points, 3rd = 1 point.</p>
 
 <div class="button-bar">
   <button onclick="submitVote()">Submit Vote</button>
@@ -382,7 +382,7 @@ const categories = {
 
 const categoryDescriptions = {
   "Best Picture": "This is the movie that was overall best film of the year.",
-  "Worst Movie": "Which movie was just staingt up trash and unjoyable.",
+  "Worst Movie": "Which movie was just straight up trash and unjoyable.",
   "Most Disappointing": "High expectations that didn’t deliver.",
   "Most Surprising": "The movie that exceeded expectations the most.",
   "Best Visual Looking Movie": "Outstanding visuals, cinematography, or production design.",
@@ -437,19 +437,16 @@ for (const [category, options] of Object.entries(categories)) {
     label.appendChild(select);
     label.appendChild(datalist);
 
-
     select.dataset.category = category;
     select.dataset.points = 3 - i;
 
-    label.appendChild(select);
     div.querySelector(".category-content").appendChild(label);
-
-    const header = div.querySelector(".category-header");
-    header.onclick = () => {
-      div.classList.toggle("open");
-};
-
   });
+
+  const header = div.querySelector(".category-header");
+  header.onclick = () => {
+    div.classList.toggle("open");
+  };
 
   container.appendChild(div);
 }
